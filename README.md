@@ -32,52 +32,52 @@ With regards to web2project specifically, the useful bit is that all of the inte
 
 Results of: curl -X OPTIONS http://localhost/web2project-slim/links
 
-{
-    "actions": {
-        "create": {
-            "href": "/web2project-slim/links", 
-            "method": "POST", 
-            "optional": [ "link_project", "link_url", "link_task", "link_name", "link_parent", "link_description", "link_owner", "link_date", "link_icon", "link_category" ],
-            "required": [ "link_name", "link_url", "link_owner" ]
+    {
+        "actions": {
+            "create": {
+                "href": "/web2project-slim/links", 
+                "method": "POST", 
+                "optional": [ "link_project", "link_url", "link_task", "link_name", "link_parent", "link_description", "link_owner", "link_date", "link_icon", "link_category" ],
+                "required": [ "link_name", "link_url", "link_owner" ]
+            }, 
+            "delete": {
+                "href": "/web2project-slim/links:id", 
+                "method": "DELETE", 
+                "required": [ "link_id" ]
+            }, 
+            "edit": {
+                "href": "/web2project-slim/links:id", 
+                "method": "PATCH", 
+                "optional": [ "link_project", "link_url", "link_task", "link_name", "link_parent", "link_description", "link_owner", "link_date", "link_icon", "link_category" ], 
+                "required": [
+                    "link_id"
+                ]
+            }, 
+            "filter": {
+                "href": "/web2project-slim/links", 
+                "method": "GET", 
+                "optional": ["page", "limit"]
+            }, 
+            "help": {
+                "href": "/web2project-slim/links", 
+                "method": "OPTIONS"
+            }, 
+            "index": {
+                "href": "/web2project-slim/links", 
+                "method": "GET"
+            }, 
+            "search": {
+                "href": "/web2project-slim/links", 
+                "method": "GET", 
+                "required": [ "search" ]
+            }, 
+            "view": {
+                "href": "/web2project-slim/links:id", 
+                "method": "GET", 
+                "required": [ "link_id" ]
+            }
         }, 
-        "delete": {
-            "href": "/web2project-slim/links:id", 
-            "method": "DELETE", 
-            "required": [ "link_id" ]
-        }, 
-        "edit": {
-            "href": "/web2project-slim/links:id", 
-            "method": "PATCH", 
-            "optional": [ "link_project", "link_url", "link_task", "link_name", "link_parent", "link_description", "link_owner", "link_date", "link_icon", "link_category" ], 
-            "required": [
-                "link_id"
-            ]
-        }, 
-        "filter": {
-            "href": "/web2project-slim/links", 
-            "method": "GET", 
-            "optional": ["page", "limit"]
-        }, 
-        "help": {
-            "href": "/web2project-slim/links", 
-            "method": "OPTIONS"
-        }, 
-        "index": {
-            "href": "/web2project-slim/links", 
-            "method": "GET"
-        }, 
-        "search": {
-            "href": "/web2project-slim/links", 
-            "method": "GET", 
-            "required": [ "search" ]
-        }, 
-        "view": {
-            "href": "/web2project-slim/links:id", 
-            "method": "GET", 
-            "required": [ "link_id" ]
-        }
-    }, 
-    "resource_uri": "/links", 
-    "root_uri": "/web2project-slim", 
-    "self": "/web2project-slim/links"
-}
+        "resource_uri": "/links", 
+        "root_uri": "/web2project-slim", 
+        "self": "/web2project-slim/links"
+    }
